@@ -1,3 +1,39 @@
 body {
     background: #F9E4B7;
+    font-family: 'Questrial', Arial, Helvetica, sans-serif;
+}
+
+.Heading {
+    margin-left: 20px;
+}
+
+.submitButton {
+    
+    font-family: 'Questrial', Arial, Helvetica, sans-serif;
+}
+
+textarea {
+    margin-left: 20px;
+    font-family: 'Questrial', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+#idea::-webkit-input-placeholder {
+  font-family: 'Questrial', Arial, Helvetica, sans-serif;
+}
+
+#idea:-ms-input-placeholder {
+  font-family: 'Questrial', Arial, Helvetica, sans-serif;
+}
+
+#idea:-moz-placeholder {
+  font-family: 'Questrial', Arial, Helvetica, sans-serif;
+}
+
+#idea::-moz-placeholder {
+  font-family: 'Questrial', Arial, Helvetica, sans-serif;
 }
