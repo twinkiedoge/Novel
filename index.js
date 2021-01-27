@@ -9,7 +9,5 @@ function submit(){
     var ideaVal = idea.value;
     ideaRef.push().set(ideaVal);
 
-    ideaRef.push().set(ideaVal);
-    
     idea.value = "";
 }
