@@ -4,15 +4,23 @@ var idea = document.getElementById("idea");
 
 function submit(){
 
-    var rootRef = firebase.database().ref();
+    var ideaRef = firebase.database().ref("Ideas/");
     var ideaVal = idea.value;
-    rootRef.push().set(ideaVal);
-    window.alert("FB");
+    ideaRef.push().set(ideaVal);
+
 }
 
+
 function pullIdea(){
-    window.alert("test");
-    var rootRef = firebase.database().ref();
 
 
+    var ideaRef = firebase.database().ref("Ideas/").once('value',
+    function(snapshot) {
+        snapshot.forEach(function(childSnapShot){
+            var childKey = childSnapShot.key;
+            var childData = childSnapShot.val();
+            console.log(childData);
+        });
+    });
+    
 }
