@@ -15,12 +15,6 @@ body {
     margin-bottom: -10px;
 }
 
-/* .fieldsetContainer {
-    height: 0;
-    overflow: hidden;
-    transition: height 400ms linear;
-} */
-
 #submitButton {
     font-family: 'Questrial', Arial, Helvetica, sans-serif;
     font-size: 15px;
@@ -51,7 +45,7 @@ textarea {
     resize: none;
     font-size: 20px;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     border: none;
     overflow: auto;
     outline: none;
@@ -63,7 +57,7 @@ textarea {
 #description {
     width: 600px;
     height: 40px;    
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 #idea {

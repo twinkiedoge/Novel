@@ -8,17 +8,29 @@ function pullIdea(){
             var childKey = childSnapShot.key;
             var childData = childSnapShot.val();
             console.log(childData.idea);
-            
-            tableData += '<tr>';
-            tableData += '<td>' + childData.idea + '</td>';
-            tableData += '</tr>';
-            
-            // var newData = document.getElementById('insertData');
-            // newData.insertAdjacentHTML('afterbegin',childData.idea);
-
+            console.log(childData.description);
+            tableData += '<button type="button" class="collapsible">' + childData.idea + '</button>';
+            tableData += '<div class="content">' + '<p>' + childData.description + '</p>' + '</div>';
         });
-        // $('#firetable').append(tableData);
-        // var tableData = '';
+        $('#firetable').append(tableData);
+        var tableData = '';
+        collapsible();
     });
+}
 
+function collapsible(){
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            } 
+        });
+    }    
 }

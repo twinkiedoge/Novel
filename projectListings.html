@@ -4,6 +4,9 @@
         <meta charset="utf-8">
         <title>NOVEL</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="projectListings.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     </head>
     <body onload="pullIdea()">
         <div class="Heading">
@@ -32,9 +35,24 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
-    <table>
-        
-    </table>
+    <table id="firetable"></table>
+    <nav>
+        <div id="navbar">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li>|</li>
+              <li><a href="projectListings.html" onclick="pullIdea()">Ideas</a></li>
+              <li>|</li>
+              <li><a href="yourListings.html">Your Listings</a></li>
+              <li>|</li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
         <script src="projectListings.js" async></script>
+        <footer id="bottom">
+            <p>Copyright &copy; 2021 by Alex Bobroff and Colby Cho</p>
+
+        </footer>
     </body>
 </html>
