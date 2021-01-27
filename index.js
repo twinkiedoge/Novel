@@ -1,1 +1,6 @@
-window.alert("colby has a short penis")
+
+var submitButton = document.getElementByID("submitButton");
+
+function submit(){
+  window.alert("button working");
+}
