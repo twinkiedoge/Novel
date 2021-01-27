@@ -54,13 +54,13 @@ textarea {
     box-shadow: none;
 }
 
-#idea {
+#description {
     width: 600px;
     height: 40px;    
     margin-top: 5px;
 }
 
-#subject {
+#idea {
     width: 600px;
     height: 20px;    
     margin-top: 20px;
