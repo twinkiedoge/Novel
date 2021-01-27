@@ -1,6 +1,9 @@
 
-var submitButton = document.getElementByID("submitButton");
+var submitButton = document.getElementById("submitButton");
+var idea = document.getElementById("idea");
 
 function submit(){
-  window.alert("button working");
+  var rootRef = firebase.database().ref();
+  rootRef.child("text").set("weiner");
+  window.alert("FB");
 }
