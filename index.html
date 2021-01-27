@@ -2,7 +2,9 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>NOVEL</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
@@ -11,7 +13,10 @@
         <div class="Heading">
             <h1>Novel</h1>
         </div>
-        <textarea id="idea" placeholder="write your idea here" name="textbox" rows="2" cols="80"></textarea>
+        <div class="textareas">
+            <textarea id="subject" placeholder="Subject" name="subject"></textarea>
+            <textarea id="idea" placeholder="Write your idea here!" name="textbox"></textarea>
+        </div>
         <button id="submitButton" onclick="submit()">Submit</button>
 
         <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -43,15 +48,17 @@
             <div id="navbar">
                 <ul>
                   <li><a href="projectListings.html" onclick="pullIdea()">Ideas</a></li>
+                  <li>|</li>
                   <li><a href="yourListings.html">Your Listings</a></li>
+                  <li>|</li>
                   <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
         </nav>
 
     </body>
-    <footer>
-        <p>Copyright &copy; 2021 Alex Bobroff and Colby Cho</p>
+    <footer class="bottom">
+        <p>Copyright &copy; 2021 by Alex Bobroff and Colby Cho</p>
     
     </footer>
 </html>

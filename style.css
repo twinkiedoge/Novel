@@ -1,25 +1,93 @@
+html {
+    height: 100%;
+    background-color: #ffd768;
+
+}
+
 body {
-    background: #F9E4B7;
     font-family: 'Questrial', Arial, Helvetica, sans-serif;
 }
 
-.Heading {
-    margin-left: 20px;
+.Heading h1{
+    text-align: center;
+    font-size: 70px;
+    color: black;
+    /* padding-bottom: 20px; */
 }
 
-.submitButton {
-    
+#submitButton {
     font-family: 'Questrial', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: white; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    display: block;
+    padding: 15px 32px;
+    background-color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#submitButton:hover {
+    background-color: white;
+    color: black;
+    transition-property: color;
+    transition-duration: 0.5s;
 }
 
 textarea {
-    margin-left: 20px;
     font-family: 'Questrial', Arial, Helvetica, sans-serif;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    resize: none;
     font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    border: none;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 }
 
-nav ul li {
+#idea {
+    width: 600px;
+    height: 40px;    
+    margin-top: 5px;
+}
+
+#subject {
+    width: 600px;
+    height: 20px;    
+    margin-top: 20px;
+    
+}
+
+li {
+    display: inline-block;
+    padding: 15px;
+
+}
+
+nav, ul, a {
+    text-decoration: none;
+    color: black;    
     list-style-type: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+a:hover {
+    color: white;
+}
+
+#bottom {
+    text-align: center;
+    margin-top: 300px;
 }
 
 #idea::-webkit-input-placeholder {
