@@ -1,18 +1,18 @@
 
 var submitButton = document.getElementById("submitButton");
 var idea = document.getElementById("idea");
-var subject = document.getElementById("subject");
+var description = document.getElementById("description");
 
 function submit(){
 
     var ideaRef = firebase.database().ref("Ideas/");
     var ideaVal = idea.value;
-    var subjectVal = subject.value;
+    var descriptionVal = description.value;
     ideaRef.push().set({
-        subject: subjectVal,
+        description: descriptionVal,
         idea: ideaVal
     });
 
     idea.value = "";
-    subject.value = "";
+    idea.description = "";
 }
