@@ -1,13 +1,17 @@
 
-
 function pullIdea(){
-    console.log("hi");
+    var tableData = '';
     var ideaRef = firebase.database().ref("Ideas/").once('value',
     function(snapshot) {
         snapshot.forEach(function(childSnapShot){
             var childKey = childSnapShot.key;
             var childData = childSnapShot.val();
-            console.log(childData);
+            tableData += '<tr>';
+            tableData += '<td>' + childData + '</td>';
+            tableData += '</tr>';
+            console.log(tableData);
         });
+        $('#firetable').append(tableData);
+        var tableData = '';
     });
 }
