@@ -11,3 +11,5 @@ function submit(){
     rootRef.push().set(ideaVal);
     window.alert("FB");
 }
+
+$("#firelist").html(recommendation.title)
