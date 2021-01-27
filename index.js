@@ -1,17 +1,17 @@
-$('textarea').on('input', function () {
-    this.style.height = 'auto';             
-    this.style.height = (this.scrollHeight) + 'px';
-});
 
 var submitButton = document.getElementById("submitButton");
 var idea = document.getElementById("idea");
-var heading = document.querySelector(".Heading");
+var subject = document.getElementById("subject");
 
 function submit(){
 
     var ideaRef = firebase.database().ref("Ideas/");
     var ideaVal = idea.value;
-    ideaRef.push().set(ideaVal);
+    var subjectVal = subject.value;
+    ideaRef.push().set({
+        subject: subjectVal,
+        idea: ideaVal
+    });
 
     idea.value = "";
 }
