@@ -9,7 +9,6 @@ function submit(){
     var ideaVal = idea.value;
 
     rootRef.push().set(ideaVal);
-    window.alert("FB");
+    
+    idea.value = "";
 }
-
-
