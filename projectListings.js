@@ -7,13 +7,18 @@ function pullIdea(){
         snapshot.forEach(function(childSnapShot){
             var childKey = childSnapShot.key;
             var childData = childSnapShot.val();
-            console.log(childData.description);
+            console.log(childData.idea);
+            
             tableData += '<tr>';
             tableData += '<td>' + childData.idea + '</td>';
             tableData += '</tr>';
+            
+            // var newData = document.getElementById('insertData');
+            // newData.insertAdjacentHTML('afterbegin',childData.idea);
+
         });
-        $('#firetable').append(tableData);
-        var tableData = '';
+        // $('#firetable').append(tableData);
+        // var tableData = '';
     });
 
 }
