@@ -14,4 +14,5 @@ function submit(){
     });
 
     idea.value = "";
+    subject.value = "";
 }
