@@ -12,4 +12,4 @@ function submit(){
     window.alert("FB");
 }
 
-$("#firelist").html(recommendation.title)
+
