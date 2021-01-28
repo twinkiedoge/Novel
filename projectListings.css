@@ -11,16 +11,20 @@ h1 {
     margin-bottom: -10px;
 }
 
-/* button {
+button {
     font-family: 'Questrial', Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: row;
-} */
+}
 
-.container {
+.main-container {
     display: flex;
     flex-direction: row;
 }
+
+.idea-container {
+    display: flex;
+    flex-direction: column;
+}
+
 
 /* .upvote {
     height: 50px;
@@ -44,9 +48,9 @@ h1 {
   outline: none;
   font-size: 20px;
   margin-top: 10px;
-  margin-left: 10%;
-  margin-right: 10%;
-  width: 80%;
+  /* margin-left: 10%;
+  margin-right: 10%; */
+
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -58,8 +62,8 @@ h1 {
 
 .content {
   padding: 0 18px;
-  margin-left: 10%;
-  margin-right: 10%;
+  /* margin-left: 10%;
+  margin-right: 10%; */
   max-height: 0;
   overflow: hidden;
   border-bottom-left-radius: 5px;

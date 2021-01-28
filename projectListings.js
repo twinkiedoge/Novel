@@ -8,9 +8,11 @@ function pullIdea(){
             var childKey = childSnapShot.key;
             var childData = childSnapShot.val();
             
-            tableData += '<div class="container">';
+            tableData += '<div class="main-container">';
+            tableData += '<div class="idea-container">';
             tableData += '<button type="button" class="collapsible">' + childData.idea + '</button>';
             tableData += '<div class="content">' + '<p>' + childData.description + '</p>' + '</div>';
+            tableData += '</div>';
             tableData += '<button type="button" onclick="upvote(\''+ childKey +'\')" class="upvote">' + "up" + "</button>";
             tableData += '<button type="button" onclick="downvote(\''+ childKey +'\')" class="downvote">' + "down" + "</button>";
             tableData += '</div>';
