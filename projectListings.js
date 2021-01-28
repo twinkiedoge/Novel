@@ -19,6 +19,7 @@ function pullIdea(){
     });
 }
 
+//for collapsible buttons
 function collapsible(){
     var coll = document.getElementsByClassName("collapsible");
     var i;
