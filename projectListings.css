@@ -11,16 +11,13 @@ h1 {
     margin-bottom: -10px;
 }
 
-/* table, button {
+button {
     font-family: 'Questrial', Arial, Helvetica, sans-serif;
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-} */
+    display: flex;
+    flex-direction: row;
+}
 
-div {
-    /* yo */
+.container {
     display: flex;
     flex-direction: row;
 }
