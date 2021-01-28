@@ -9,8 +9,9 @@ function pullIdea(){
             var childData = childSnapShot.val();
             console.log(childData.idea);
             console.log(childData.description);
+            console.log(childKey);
             tableData += '<button type="button" class="collapsible">' + childData.idea + '</button>';
-            tableData += '<button type="button" onclick="upvote()" class="upvote" id="' + childKey + '">' + "</button>";
+            tableData += '<button type="button" onclick="upvote('+ childSnapShot.key +')" class="upvote">' + "</button>";
             tableData += '<div class="content">' + '<p>' + childData.description + '</p>' + '</div>';
         });
         $('#firetable').append(tableData);
@@ -37,6 +38,6 @@ function collapsible(){
     }
 }
 
-function upvote(){
-
+function upvote(childKey){
+    console.log(childKey);
 }
