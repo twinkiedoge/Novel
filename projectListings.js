@@ -50,3 +50,18 @@ function upvote(childKey){
         });
     });
 }
+
+
+function downvote(childKey){
+
+    var postRef = firebase.database().ref("Ideas/").child(childKey);
+
+    postRef.once('value', function(childSnapShot){
+        var childData = childSnapShot.val();
+        var downvotes = childData.downvotes + 1;
+
+        postRef.update({
+            "downvotes": downvotes
+        });
+    });
+}
