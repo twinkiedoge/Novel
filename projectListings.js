@@ -7,10 +7,13 @@ function pullIdea(){
         snapshot.forEach(function(childSnapShot){
             var childKey = childSnapShot.key;
             var childData = childSnapShot.val();
-            //new edit
+            
+            tableData += '<div class="container">';
             tableData += '<button type="button" class="collapsible">' + childData.idea + '</button>';
-            tableData += '<button type="button" onclick="upvote(\''+ childKey +'\')" class="upvote">' + "</button>";
             tableData += '<div class="content">' + '<p>' + childData.description + '</p>' + '</div>';
+            tableData += '<button type="button" onclick="upvote(\''+ childKey +'\')" class="upvote">' + "up" + "</button>";
+            tableData += '<button type="button" onclick="downvote(\''+ childKey +'\')" class="downvote">' + "down" + "</button>";
+            tableData += '</div>';
         });
         $('#firetable').append(tableData);
         var tableData = '';

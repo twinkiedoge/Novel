@@ -11,11 +11,11 @@ h1 {
     margin-bottom: -10px;
 }
 
-button {
+/* button {
     font-family: 'Questrial', Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: row;
-}
+} */
 
 .container {
     display: flex;
