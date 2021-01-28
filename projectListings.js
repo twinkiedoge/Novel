@@ -10,7 +10,7 @@ function pullIdea(){
             console.log(childData.idea);
             console.log(childData.description);
             tableData += '<button type="button" class="collapsible">' + childData.idea + '</button>';
-            tableData += '<button type="button" class="upvote" id=">' + childKey + '">' + "</button>";
+            tableData += '<button type="button" class="upvote" id="' + childKey + '">' + "</button>";
             tableData += '<div class="content">' + '<p>' + childData.description + '</p>' + '</div>';
         });
         $('#firetable').append(tableData);
@@ -31,7 +31,7 @@ function collapsible(){
                 content.style.maxHeight = null;
             } else {
                 content.style.maxHeight = content.scrollHeight + "px";
-            } 
+            }
         });
-    }    
+    }
 }
