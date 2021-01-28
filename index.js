@@ -9,11 +9,13 @@ function submit(){
     var ideaVal = idea.value;
     var descriptionVal = description.value;
     var upvotes = 0;
+    var downvotes = 0;
 
     ideaRef.push().set({
         idea: ideaVal,
         description: descriptionVal,
-        upvotes: upvotes
+        upvotes: upvotes,
+        downvotes: downvotes
     });
 
     idea.value = "";
