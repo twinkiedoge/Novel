@@ -7,14 +7,10 @@ function pullIdea(){
         snapshot.forEach(function(childSnapShot){
             var childKey = childSnapShot.key;
             var childData = childSnapShot.val();
-            
-            tableData += '<div class=".container">';
-            tableData += '<button type="button" onclick="upvote(\'' + childKey + '\')" class="upvote">' + childData.idea + "</button>";
-            tableData += '<button type="button" onclick="dowbvote(\'' + childKey + '\')" class="downvote">' + "</button>";
+
             tableData += '<button type="button" class="collapsible">' + childData.idea + '</button>';
+            tableData += '<button type="button" onclick="upvote(\''+ childKey +'\')" class="upvote">' + "</button>";
             tableData += '<div class="content">' + '<p>' + childData.description + '</p>' + '</div>';
-            tableData += '</div>';
-            
         });
         $('#firetable').append(tableData);
         var tableData = '';
@@ -48,7 +44,7 @@ function upvote(childKey){
     postRef.once('value', function(childSnapShot){
         var childData = childSnapShot.val();
         var upvotes = childData.upvotes + 1;
-        console.log("yes");
+
         postRef.update({
             "upvotes": upvotes
         });
