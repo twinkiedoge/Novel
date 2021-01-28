@@ -12,7 +12,7 @@ body {
     text-align: center;
     font-size: 70px;
     color: black;
-    margin-bottom: -10px;
+    margin-top: 150px;
 }
 
 #submitButton {
@@ -43,7 +43,6 @@ textarea {
     margin-left: auto;
     margin-right: auto;
     resize: none;
-    font-size: 20px;
     border: none;
     border-radius: 5px;
     border: none;
@@ -58,13 +57,14 @@ textarea {
     width: 600px;
     height: 40px;    
     margin-top: 10px;
+    font-size: 15px;
 }
 
 #idea {
     width: 600px;
     height: 20px;    
-    margin-top: 20px;
-    
+    font-size: 20px;
+    margin-top: -10px;
 }
 
 li {
@@ -79,6 +79,7 @@ nav, ul, a {
     list-style-type: none;
     font-size: 20px;
     text-align: center;
+    margin-top: -50px;
 }
 
 a:hover {
@@ -88,7 +89,7 @@ a:hover {
 #bottom {
     text-align: center;
     width: 100%;
-    margin-top: 300px;
+    margin-top: 200px;
 }
 
 #idea::-webkit-input-placeholder {

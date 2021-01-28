@@ -12,6 +12,19 @@
         <div class="Heading">
             <h1>Novel Ideas</h1>
         </div>
+        <nav>
+            <div id="navbar">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li>|</li>
+                  <li><a href="projectListings.html" onclick="pullIdea()">Ideas</a></li>
+                  <li>|</li>
+                  <li><a href="yourListings.html">Your Listings</a></li>
+                  <li>|</li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
         <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase.js"></script>
 
@@ -36,7 +49,7 @@
   firebase.analytics();
 </script>
     <table id="firetable"></table>
-    <nav>
+    <!-- <nav>
         <div id="navbar">
             <ul>
               <li><a href="index.html">Home</a></li>
@@ -48,7 +61,7 @@
               <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </div>
-    </nav>
+    </nav> -->
         <script src="projectListings.js" async></script>
         <footer id="bottom">
             <p>Copyright &copy; 2021 by Alex Bobroff and Colby Cho</p>
