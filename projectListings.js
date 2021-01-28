@@ -7,7 +7,7 @@ function pullIdea(){
         snapshot.forEach(function(childSnapShot){
             var childKey = childSnapShot.key;
             var childData = childSnapShot.val();
-
+            //new edit
             tableData += '<button type="button" class="collapsible">' + childData.idea + '</button>';
             tableData += '<button type="button" onclick="upvote(\''+ childKey +'\')" class="upvote">' + "</button>";
             tableData += '<div class="content">' + '<p>' + childData.description + '</p>' + '</div>';
