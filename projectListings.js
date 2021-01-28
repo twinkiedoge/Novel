@@ -36,10 +36,17 @@ function collapsible(){
     }
 }
 
+
 function upvote(childKey){
-    console.log("yes");
 
-    var postRef = firebase.database().ref("Ideas/" + childKey + "/");
+    var postRef = firebase.database().ref("Ideas/").child(childKey);
 
-
+    postRef.once('value', function(childSnapShot){
+        var childData = childSnapShot.val();
+        var upvotes = childData.upvotes + 1;
+        console.log("yes");
+        postRef.update({
+            "upvotes": upvotes
+        });
+    });
 }
