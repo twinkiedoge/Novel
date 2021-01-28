@@ -11,26 +11,44 @@ h1 {
     margin-bottom: -10px;
 }
 
-table, button {
+/* table, button {
     font-family: 'Questrial', Arial, Helvetica, sans-serif;
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    /* border-radius: 5px; */
+} */
+
+div {
+    display: flex;
+    flex-direction: row;
 }
+
+/* .upvote {
+    height: 50px;
+    width: 50px;
+    margin-right: 0%;
+}
+
+.downvote {
+    height: 50px;
+    width: 50px;
+    margin-right: 0%;
+} */
 
 .collapsible {
   background-color: white;
   color: black;
   cursor: pointer;
   padding: 18px;
-  width: 100%;
   border: none;
   text-align: left;
   outline: none;
   font-size: 20px;
   margin-top: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -42,7 +60,8 @@ table, button {
 
 .content {
   padding: 0 18px;
-  /* width: 96.5%; */
+  margin-left: 10%;
+  margin-right: 10%;
   max-height: 0;
   overflow: hidden;
   border-bottom-left-radius: 5px;
