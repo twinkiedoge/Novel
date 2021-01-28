@@ -10,7 +10,7 @@ function pullIdea(){
             console.log(childData.idea);
             console.log(childData.description);
             tableData += '<button type="button" class="collapsible">' + childData.idea + '</button>';
-            tableData += '<button type="button" class="upvote" id="' + childKey + '">' + "</button>";
+            tableData += '<button type="button" class="upvote" id="' + childKey + '">' + "onclick='upvote()'""+ "</button>";
             tableData += '<div class="content">' + '<p>' + childData.description + '</p>' + '</div>';
         });
         $('#firetable').append(tableData);
@@ -34,4 +34,8 @@ function collapsible(){
             }
         });
     }
+}
+
+function upvote(){
+
 }
