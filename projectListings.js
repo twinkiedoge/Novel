@@ -13,8 +13,10 @@ function pullIdea(){
             tableData += '<button type="button" class="collapsible">' + childData.idea + '</button>';
             tableData += '<div class="content">' + '<p>' + childData.description + '</p>' + '</div>';
             tableData += '</div>';
+            tableData += '<div class="buttons">';
             tableData += '<button type="button" onclick="upvote(\''+ childKey +'\')" class="upvote">' + "up" + "</button>";
             tableData += '<button type="button" onclick="downvote(\''+ childKey +'\')" class="downvote">' + "down" + "</button>";
+            tableData += '</div>';
             tableData += '</div>';
         });
         $('#firetable').append(tableData);

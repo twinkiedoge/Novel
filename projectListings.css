@@ -11,8 +11,24 @@ h1 {
     margin-bottom: -10px;
 }
 
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 button {
     font-family: 'Questrial', Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 10px;
+}
+
+button:hover {
+    background-color: #ff7300;
 }
 
 .main-container {
@@ -23,20 +39,29 @@ button {
 .idea-container {
     display: flex;
     flex-direction: column;
+    width: 1000px;
 }
 
+.buttons {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
 
-/* .upvote {
-    height: 50px;
+.upvote {
+    height: 28px;
     width: 50px;
-    margin-right: 0%;
+    /* border-top-left-radius: 5px; */
+    border-top-right-radius: 5px;
+
 }
 
 .downvote {
-    height: 50px;
+    height: 28px;
     width: 50px;
-    margin-right: 0%;
-} */
+    /* border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; */
+}
 
 .collapsible {
   background-color: white;
@@ -48,11 +73,8 @@ button {
   outline: none;
   font-size: 20px;
   margin-top: 10px;
-  /* margin-left: 10%;
-  margin-right: 10%; */
-
   border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  /* border-top-right-radius: 5px; */
 }
 
 .active, .collapsible:hover {
