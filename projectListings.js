@@ -1,4 +1,3 @@
-
 function pullIdea(){
 
     var tableData = '';
@@ -7,6 +6,9 @@ function pullIdea(){
         snapshot.forEach(function(childSnapShot){
             var childKey = childSnapShot.key;
             var childData = childSnapShot.val();
+            var downvotes = childData.downvotes;
+            var upvotes = childData.upvotes;
+            var total = upvotes - downvotes;
 
             tableData += '<div class="main-container">';
             tableData += '<div class="idea-container">';
@@ -17,7 +19,7 @@ function pullIdea(){
             tableData += '<button type="button" onclick="upvote(\''+ childKey +'\')" class="upvote">' + "up" + "</button>";
             tableData += '<button type="button" onclick="downvote(\''+ childKey +'\')" class="downvote">' + "down" + "</button>";
             tableData += '</div>';
-            tableData += '<div class="counter">' + counter(childKey) + '</div>';
+            tableData += '<div class="counter">' + total + '</div>';
             tableData += '</div>';
         });
         $('#firetable').append(tableData);
@@ -77,16 +79,4 @@ function downvote(childKey){
         });
     });
     console.log("downvote");
-}
-
-
-function counter(childKey){
-    var postRef = firebase.database().ref("Ideas/").child(childKey);
-    postRef.once('value', function(childSnapShot){
-        var childData = childSnapShot.val();
-        var downvotes = childData.downvotes;
-        var upvotes = childData.upvotes;
-        return (upvotes - downvotes);
-    });
-    
 }
