@@ -1,3 +1,4 @@
+
 function pullIdea(){
     //main function
     var tableData = '';
@@ -63,6 +64,7 @@ function upvote(childKey){
         });
     });
     console.log("upvote");
+    pullIdea();
 }
 
 //Same functionality as upvotes except for downvotes -AB.
@@ -79,4 +81,5 @@ function downvote(childKey){
         });
     });
     console.log("downvote");
+    pullIdea();
 }
