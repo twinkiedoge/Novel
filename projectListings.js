@@ -1,5 +1,5 @@
 function pullIdea(){
-
+    //main function
     var tableData = '';
     var ideaRef = firebase.database().ref("Ideas/").once('value',
     function(snapshot) {
