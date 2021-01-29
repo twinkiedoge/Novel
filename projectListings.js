@@ -7,16 +7,12 @@ function pullIdea(){
         snapshot.forEach(function(childSnapShot){
             var childKey = childSnapShot.key;
             var childData = childSnapShot.val();
-            
-            tableData += '<div class="main-container">';
-            tableData += '<div class="idea-container">';
+
+            tableData += '<div class="container">';
             tableData += '<button type="button" class="collapsible">' + childData.idea + '</button>';
             tableData += '<div class="content">' + '<p>' + childData.description + '</p>' + '</div>';
-            tableData += '</div>';
-            tableData += '<div class="buttons">';
             tableData += '<button type="button" onclick="upvote(\''+ childKey +'\')" class="upvote">' + "up" + "</button>";
             tableData += '<button type="button" onclick="downvote(\''+ childKey +'\')" class="downvote">' + "down" + "</button>";
-            tableData += '</div>';
             tableData += '</div>';
         });
         $('#firetable').append(tableData);
@@ -43,7 +39,10 @@ function collapsible(){
     }
 }
 
-
+/*
+upvote function takes the childkey of a specfic idea post as an arguement and
+incremements the amount of upvotes by 1 -AB.
+*/
 function upvote(childKey){
 
     var postRef = firebase.database().ref("Ideas/").child(childKey);
@@ -56,9 +55,10 @@ function upvote(childKey){
             "upvotes": upvotes
         });
     });
+    console.log("upvote");
 }
 
-
+//Same functionality as upvotes except for downvotes -AB.
 function downvote(childKey){
 
     var postRef = firebase.database().ref("Ideas/").child(childKey);
@@ -70,5 +70,18 @@ function downvote(childKey){
         postRef.update({
             "downvotes": downvotes
         });
+    });
+    console.log("downvote");
+}
+
+
+function counter(childKey){
+    var postRef = firebase.database().ref("Ideas/").child(childKey);
+
+    postRef.once('value', function(childSnapShot){
+        var childData = childSnapShot.val();
+        var downvotes = childData.downvotes;
+        var upvotes = childData.upvotes;
+        return upvotes - downvotes;
     });
 }
