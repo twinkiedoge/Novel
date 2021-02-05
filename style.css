@@ -57,7 +57,7 @@ textarea {
     width: 600px;
     height: 40px;    
     margin-top: 10px;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 #idea {
@@ -83,6 +83,7 @@ li, a {
     list-style-type: none;
     font-size: 20px;
     display: inline-block;
+    padding-right: 15px;
 }
 
 a:hover {
