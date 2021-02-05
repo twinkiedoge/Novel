@@ -21,18 +21,9 @@ function pullIdea(){
             tableData += '<button type="button" onclick="downvote(\''+ childKey +'\')" class="downvote">' + "down" + "</button>";
             tableData += '</div>';
             tableData += '<div class="circle">';
-            tableData += '<div class="counter" id="newCount"+ i>' + total + '</div>';
+            tableData += '<div class="counter" id="' + childKey + '">' + total + '</div>';
             tableData += '</div>';
             tableData += '</div>';
-        });
-        var i=0;
-        $(".counter").each(function(){
-            i++;
-            console.log("count: ");
-            console.log(i);
-            var newID='newCount'+i;
-            $(this).attr('id',newID);
-            $(this).val(i);
         });
         $('#firetable').append(tableData);
         var tableData = '';
@@ -69,14 +60,13 @@ function upvote(childKey){
     postRef.once('value', function(childSnapShot){
         var childData = childSnapShot.val();
         var upvotes = childData.upvotes + 1;
+        var downvotes = childData.downvotes;
 
         postRef.update({
             "upvotes": upvotes
         });
+        document.getElementById(childKey).innerHTML = upvotes - downvotes;
     });
-    console.log("upvote");
-    // console.log(document.getElementsById("newCount"));
-    pullIdea();
 }
 
 //Same functionality as upvotes except for downvotes -AB.
@@ -86,12 +76,13 @@ function downvote(childKey){
 
     postRef.once('value', function(childSnapShot){
         var childData = childSnapShot.val();
+        var upvotes = childData.upvotes;
         var downvotes = childData.downvotes + 1;
 
         postRef.update({
             "downvotes": downvotes
         });
+        document.getElementById(childKey).innerHTML = upvotes - downvotes;
     });
     console.log("downvote");
-    pullIdea();
 }
