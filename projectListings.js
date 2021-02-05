@@ -20,7 +20,9 @@ function pullIdea(){
             tableData += '<button type="button" onclick="upvote(\''+ childKey +'\')" class="upvote">' + "up" + "</button>";
             tableData += '<button type="button" onclick="downvote(\''+ childKey +'\')" class="downvote">' + "down" + "</button>";
             tableData += '</div>';
+            tableData += '<div class="circle">';
             tableData += '<div class="counter">' + total + '</div>';
+            tableData += '</div>';
             tableData += '</div>';
         });
         $('#firetable').append(tableData);
@@ -64,6 +66,7 @@ function upvote(childKey){
         });
     });
     console.log("upvote");
+    console.log(document.getElementsByClassName("counter"));
     pullIdea();
 }
 

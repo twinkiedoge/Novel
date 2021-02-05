@@ -43,7 +43,7 @@ button:hover {
 }
 
 .buttons {
-    margin-top: 10px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
 }
@@ -52,7 +52,7 @@ button:hover {
     height: 28px;
     width: 50px;
     /* border-top-left-radius: 5px; */
-    border-top-right-radius: 5px;
+    /* border-top-right-radius: 5px; */
 
 }
 
@@ -72,7 +72,7 @@ button:hover {
   text-align: left;
   outline: none;
   font-size: 20px;
-  margin-top: 10px;
+  margin-top: 30px;
   border-top-left-radius: 5px;
   /* border-top-right-radius: 5px; */
 }
@@ -93,6 +93,21 @@ button:hover {
   transition: max-height 0.2s ease-out;
   background-color: #434343;
   color: white;
+}
+
+.counter {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding-top: 18px;
+}
+
+.circle {
+    background: #434343;
+    width: 40px;
+    height: 56px;
+    margin-top: 30px;
+    border-top-right-radius: 5px;
 }
 
 li {
@@ -117,5 +132,6 @@ a:hover {
     text-align: center;
     width: 100%;
     padding-bottom: 10px;
+    margin-top: 30px;
     margin-bottom: 200px;
 }
