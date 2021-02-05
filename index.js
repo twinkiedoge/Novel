@@ -11,16 +11,34 @@ function submit(){
     var upvotes = 0;
     var downvotes = 0;
 
+    firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/firebase.User
+
+    var uid = user.uid;
     ideaRef.push().set({
         idea: ideaVal,
         description: descriptionVal,
         upvotes: upvotes,
-        downvotes: downvotes
+        downvotes: downvotes,
+        uid: uid
     });
+  } else {
+      ideaRef.push().set({
+          idea: ideaVal,
+          description: descriptionVal,
+          upvotes: upvotes,
+          downvotes: downvotes,
+          uid: null
+      });
+  }
+});
 
     idea.value = "";
     description.value = "";
 }
+
 
 var autoExpand = function (field) {
 
