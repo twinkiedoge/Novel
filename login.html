@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Login</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="login.css">
     </head>
     <body>
         <div class="Heading">
@@ -12,9 +12,9 @@
         <textarea id="userEmail" placeholder="email" name="email"></textarea>
         <textarea id="userPassword" placeholder="password" name="password"></textarea>
         <button id="submitButton" onclick="login()">Submit</button>
-        <div id="newAccount">
-            <button href="newUser.html">New to Novel? Click Here</button>
-        </div>
+            <form action="newUser.html">
+                <input id="newAccount" type="submit" value="New to Novel? Click Here"/>
+            </form>
         <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase.js"></script>
 
