@@ -64,22 +64,21 @@ textarea {
     width: 600px;
     height: 20px;    
     font-size: 20px;
-    margin-top: -10px;
+    margin-top: -50px;
 }
 
-li {
-    display: inline-block;
-    padding: 15px;
-
+#navbar {
+    text-align: center;
+    margin-top: -50px;
 }
 
-nav, ul, a {
+li, ul, a {
     text-decoration: none;
     color: black;    
     list-style-type: none;
     font-size: 20px;
-    text-align: center;
-    margin-top: -50px;
+    display: inline-block;
+    padding: 15px;
 }
 
 a:hover {

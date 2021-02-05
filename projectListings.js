@@ -26,7 +26,6 @@ function pullIdea(){
             tableData += '</div>';
         });
         $('#firetable').append(tableData);
-        var tableData = '';
         collapsible();
     });
 }
@@ -35,7 +34,6 @@ function pullIdea(){
 function collapsible(){
     var coll = document.getElementsByClassName("collapsible");
     var i;
-
     for (i = 0; i < coll.length; i++) {
         coll[i].addEventListener("click", function() {
             this.classList.toggle("active");
@@ -84,5 +82,4 @@ function downvote(childKey){
         });
         document.getElementById(childKey).innerHTML = upvotes - downvotes;
     });
-    console.log("downvote");
 }
