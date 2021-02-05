@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <div class="Heading">
+            <h1>Login</h1>
+        </div>
+        <textarea id="userEmail" placeholder="email" name="email"></textarea>
+        <textarea id="userPassword" placeholder="password" name="password"></textarea>
+        <button id="submitButton" onclick="newUser()">Submit</button>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAe6lvUesdp99Z92oSGyOQH8ea-HqcN8-w",
+    authDomain: "novel-4515e.firebaseapp.com",
+    projectId: "novel-4515e",
+    storageBucket: "novel-4515e.appspot.com",
+    messagingSenderId: "558968734212",
+    appId: "1:558968734212:web:600eb6eab77ab23ffa2b51",
+    measurementId: "G-YP642CS7ZT"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+        <script src="newUser.js" async></script>
+    </body>
+</html>
