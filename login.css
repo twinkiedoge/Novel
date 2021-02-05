@@ -1,0 +1,106 @@
+html {
+    height: 100%;
+    background-color: #ffd768;
+}
+
+body {
+    font-family: 'Questrial', Arial, Helvetica, sans-serif;
+}
+
+.Heading h1{
+    text-align: center;
+    font-size: 70px;
+    color: black;
+    margin-top: 150px;
+}
+
+a:hover {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: black;    
+    font-size: 18px;
+    display: inline-block;
+    padding: 15px;
+}
+
+#newAccount {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#submitButton {
+    font-family: 'Questrial', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: white; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    display: block;
+    padding: 15px 32px;
+    background-color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#submitButton:hover {
+    background-color: white;
+    color: black;
+    transition-property: color;
+    transition-duration: 0.5s;
+}
+
+#bottom {
+    text-align: center;
+    width: 100%;
+    margin-top: 200px;
+}
+
+textarea {
+    font-family: 'Questrial', Arial, Helvetica, sans-serif;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    resize: none;
+    border: none;
+    border-radius: 5px;
+    border: none;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+#userPassword {
+    width: 600px;
+    height: 20px;    
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+#userEmail {
+    width: 600px;
+    height: 20px;    
+    font-size: 20px;
+    margin-top: -30px;
+}
+
+#userEmail::-webkit-input-placeholder {
+  font-family: 'Questrial', Arial, Helvetica, sans-serif;
+}
+
+#userEmail:-ms-input-placeholder {
+  font-family: 'Questrial', Arial, Helvetica, sans-serif;
+}
+
+#userEmail:-moz-placeholder {
+  font-family: 'Questrial', Arial, Helvetica, sans-serif;
+}
+
+#userEmail::-moz-placeholder {
+  font-family: 'Questrial', Arial, Helvetica, sans-serif;
+}
