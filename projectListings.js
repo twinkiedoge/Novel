@@ -21,9 +21,18 @@ function pullIdea(){
             tableData += '<button type="button" onclick="downvote(\''+ childKey +'\')" class="downvote">' + "down" + "</button>";
             tableData += '</div>';
             tableData += '<div class="circle">';
-            tableData += '<div class="counter">' + total + '</div>';
+            tableData += '<div class="counter" id="newCount"+ i>' + total + '</div>';
             tableData += '</div>';
             tableData += '</div>';
+        });
+        var i=0;
+        $(".counter").each(function(){
+            i++;
+            console.log("count: ");
+            console.log(i);
+            var newID='newCount'+i;
+            $(this).attr('id',newID);
+            $(this).val(i);
         });
         $('#firetable').append(tableData);
         var tableData = '';
@@ -66,7 +75,7 @@ function upvote(childKey){
         });
     });
     console.log("upvote");
-    console.log(document.getElementsByClassName("counter"));
+    // console.log(document.getElementsById("newCount"));
     pullIdea();
 }
 
